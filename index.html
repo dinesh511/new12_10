@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <title>Its my first Page</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">   
+        
+    </head>
+    
+    <body ng-app="myApp">
+        <h1>My weather app</h1>
+        <div class="app" ng-controller="myCtrl">
+            <p>Enter the Country: <input type="text" ng-model="country"><input type="button" value="submit" ng-click="onSubmit()"/></p>
+            
+            <p class="app"> You entered: {{country}}</p>
+            <span>No. of times the request submitted: {{count}}</span>
+            <div>
+                <p>Select a City: <select ng-model="city" ng-options="x for x  in names"><option value="" disabled>Select Your City</option></select></p>
+            </div>
+            
+            
+        </div>
+        
+        <script src="https://code.angularjs.org/1.4.8/angular.min.js" ></script>
+        <script src="app.js" ></script>
+    </body>
+
+</html>
